@@ -19,9 +19,7 @@ return new class extends Migration
             $table->string('nationality');
             $table->integer('cooking_time');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->foreignId('rate_id')->constrained()->onDelete('cascade');
-            $table->foreignId('comment_id')->constrained()->onDelete('cascade');
+           
 
             $table->timestamps();
         });
