@@ -16,7 +16,7 @@ class Recipe extends Model
 
     public function category(){
 
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Category::class);
 
     }
 
@@ -30,5 +30,25 @@ class Recipe extends Model
         return $this->hasMany(Comment::class);
         
     }
+
+    public function medias(){
+
+        return $this->hasMany(Media::class);
+        
+    }
+
+    public function tipologies(){
+
+        return $this->hasOne(Tipology::class);
+
+    }
+
+    public function ingredients(){
+
+        return $this->hasMany(Ingredient::class);
+
+    }
+
+
 
 }
