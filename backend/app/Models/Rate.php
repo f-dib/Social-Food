@@ -10,8 +10,7 @@ class Rate extends Model
     use HasFactory;
 
     protected $fillable = [
-        'rate',
-        'recipe_id',
+        'rating',
     ];
 
     public function recipe(){

@@ -10,8 +10,7 @@ class Comment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'comment',
-        'recipe_id',
+        'comment'
     ];
 
     public function recipe(){

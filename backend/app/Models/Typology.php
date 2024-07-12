@@ -9,7 +9,7 @@ class Typology extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'img'];
+    protected $fillable = ['name'];
 
     public function recipe()
     {

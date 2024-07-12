@@ -11,7 +11,7 @@ class Allergen extends Model
 
     protected $fillable = [
         'name',
-        'description',
+        'type',
     ];
 
     public function recipe() {
