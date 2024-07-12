@@ -19,8 +19,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'surname',
         'email',
         'password',
+        'profile_img',
+        'biografy',
     ];
 
     /**
@@ -42,9 +45,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function recipes(){
+    public function recipes()
+    {
 
         return $this->hasMany(Recipe::class);
-        
     }
 }
