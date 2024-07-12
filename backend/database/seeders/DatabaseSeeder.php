@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Typology;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +20,19 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call([
+            UserSeeder::class,
+            CategorySeeder::class,
+            IngredientSeeder::class,
+            AllergenSeeder::class,
+            RateSeeder::class,
+            CommentSeeder::class,
+            TypologySeeder::class,
+            RecipeSeeder::class,
+            CategoryRecipeSeeder::class,
+            IngredientRecipeSeeder::class,
+            AllergenRecipeSeeder::class,
+        ]);
     }
 }
