@@ -18,6 +18,14 @@ class TypologySeeder extends Seeder
             ['name' => 'Primi'],
             ['name' => 'Secondi'],
             ['name' => 'Dolci'],
+            ['name' => 'Contorni'],
+            ['name' => 'Insalate'],
+            ['name' => 'Zuppe'],
+            ['name' => 'Panini'],
+            ['name' => 'Pizze'],
+            ['name' => 'Sushi'],
+            ['name' => 'Barbecue'],
+            ['name' => 'Cocktail']
         ];
 
         foreach ($typologies as $typology) {
