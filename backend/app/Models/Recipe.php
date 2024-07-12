@@ -9,46 +9,45 @@ class Recipe extends Model
 {
     use HasFactory;
 
-    public function user(){
+    public function user()
+    {
 
         return $this->belongsTo(User::class);
     }
 
-    public function category(){
+    public function category()
+    {
 
         return $this->hasMany(Category::class);
-
     }
 
-    public function rates(){
+    public function rates()
+    {
 
         return $this->hasMany(Rate::class);
     }
 
-    public function comments(){
+    public function comments()
+    {
 
         return $this->hasMany(Comment::class);
-        
     }
 
-    public function medias(){
+    public function medias()
+    {
 
         return $this->hasMany(Media::class);
-        
     }
 
-    public function tipologies(){
+    public function typologies()
+    {
 
-        return $this->hasOne(Tipology::class);
-
+        return $this->hasOne(Typology::class);
     }
 
-    public function ingredients(){
+    public function ingredients()
+    {
 
         return $this->hasMany(Ingredient::class);
-
     }
-
-
-
 }
