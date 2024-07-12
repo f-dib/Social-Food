@@ -2,6 +2,12 @@
 
 @section('content') 
 
+<div class="flex justify-start pt-7 px-32 gap-4 flex-wrap">
+    
+    <h1 class="dark:text-white  text-gray-900 text-3xl text-center sm:text-5xl">Ricette Disponibili</h1>
+
+</div>
+
 <div class="flex justify-center pt-7 gap-4 flex-wrap">
 
     @foreach ($recipes as $recipe)
