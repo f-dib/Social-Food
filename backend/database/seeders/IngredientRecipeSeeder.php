@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Recipe;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class IngredientRecipeSeeder extends Seeder
 {
@@ -59,9 +60,7 @@ class IngredientRecipeSeeder extends Seeder
             ['recipe_id' => 10, 'ingredient_id' => 22, 'quantity' => 50.0],
         ];
 
-        foreach ($ingredientRecipes as $ingredientRecipe) {
-            $recipe = Recipe::find($ingredientRecipe['recipe_id']);
-            $recipe->ingredients()->attach($ingredientRecipe['ingredient_id'], ['quantity' => $ingredientRecipe['quantity']]);
-        }
+        // Insert the generated relationships into the pivot table
+        DB::table('ingredient_recipe')->insert($ingredientRecipes);
     }
 }
