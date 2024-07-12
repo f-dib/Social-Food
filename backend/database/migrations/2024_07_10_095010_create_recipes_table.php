@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('recipe_img');
+            $table->string('name', 100);
             $table->text('description');
-            $table->string('nationality');
+            $table->string('nationality', 30);
             $table->integer('cooking_time');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
            

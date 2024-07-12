@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('rates', function (Blueprint $table) {
             $table->id();
-            $table->integer('rate');
+            $table->float('rate', 2,1);
             $table->foreignId('recipe_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
