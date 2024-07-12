@@ -13,7 +13,11 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        //
+        $recipes = Recipe::all();
+
+        // dd($recipes);
+
+        return view('recipes.index', compact('recipes'));
     }
 
     /**
