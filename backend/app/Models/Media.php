@@ -9,6 +9,8 @@ class Media extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['type', 'url'];
+
     public function recipe(){
 
         return $this->belongsTo(Recipe::class);
