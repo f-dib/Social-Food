@@ -9,6 +9,11 @@ class Comment extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'comment',
+        'recipe_id',
+    ];
+
     public function recipe(){
 
         return $this->belongsTo(Recipe::class);
