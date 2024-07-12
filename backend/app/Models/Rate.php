@@ -9,6 +9,11 @@ class Rate extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'rate',
+        'recipe_id',
+    ];
+
     public function recipe(){
 
         return $this->belongsTo(Recipe::class);
