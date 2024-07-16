@@ -10,7 +10,7 @@
     
     </div>
 
-    <div class="p-7 bg-white rounded-3xl flex justify-start">
+    <div class="p-10 bg-white rounded-3xl flex justify-start">
         <div>
             <h3 class="text-gray-900 text-3xl text-center sm:text-5xl py-5">jumbo title</h3>
             <p>jumbo paragraf</p>
