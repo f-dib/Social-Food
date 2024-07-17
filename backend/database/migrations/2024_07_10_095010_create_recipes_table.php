@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('nationality', 30);
             $table->integer('cooking_time');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-           
-
             $table->timestamps();
         });
     }

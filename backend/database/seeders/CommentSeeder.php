@@ -14,16 +14,16 @@ class CommentSeeder extends Seeder
     public function run(): void
     {
         $comments = [
-            ['comment' => 'Ottima ricetta!'],
-            ['comment' => 'Molto buona!'],
-            ['comment' => 'Da rifare!'],
-            ['comment' => 'Eccellente!'],
-            ['comment' => 'Buonissima!'],
-            ['comment' => 'Molto gustosa!'],
-            ['comment' => 'Squisita!'],
-            ['comment' => 'Deliziosa!'],
-            ['comment' => 'Favolosa!'],
-            ['comment' => 'Superba!'],
+            ['comment' => 'Ottima ricetta!', 'recipe_id' => '1'],
+            ['comment' => 'Molto buona!', 'recipe_id' => '2'],
+            ['comment' => 'Da rifare!', 'recipe_id' => '3'],
+            ['comment' => 'Eccellente!', 'recipe_id' => '4'],
+            ['comment' => 'Buonissima!', 'recipe_id' => '5'],
+            ['comment' => 'Molto gustosa!', 'recipe_id' => '6'],
+            ['comment' => 'Squisita!', 'recipe_id' => '7'],
+            ['comment' => 'Deliziosa!', 'recipe_id' => '8'],
+            ['comment' => 'Favolosa!', 'recipe_id' => '9'],
+            ['comment' => 'Superba!', 'recipe_id' => '10'],
         ];
 
         foreach ($comments as $comment) {
