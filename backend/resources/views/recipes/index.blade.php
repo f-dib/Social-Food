@@ -19,6 +19,12 @@
         </div>
     @endforeach
 
+    <div class="block p-6 bg-white border border-gray-200 rounded-lg shadow w-80 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <a href="{{ route('admin.recipes.create') }}">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Nuova Ricetta</h5>
+        </a>
+    </div>
+
 </div>
 
 
