@@ -43,7 +43,9 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe)
     {
-        //
+        if ($recipe->user_id != Auth::id()) abort(404);
+
+        return view('recipes.show', compact('recipe'));
     }
 
     /**
