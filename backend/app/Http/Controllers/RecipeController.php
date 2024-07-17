@@ -27,7 +27,7 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        //
+        return view('recipes.create');
     }
 
     /**
@@ -35,7 +35,16 @@ class RecipeController extends Controller
      */
     public function store(StoreRecipeRequest $request)
     {
-        //
+        $request->validated();
+
+        $newRecipe = new Recipe();
+
+        $request['user_id'] = Auth::id();
+
+        $newRecipe->fill($request->all());
+        $newRecipe->save();
+
+        return redirect()->route('recipes.index', $newRecipe->id);
     }
 
     /**
