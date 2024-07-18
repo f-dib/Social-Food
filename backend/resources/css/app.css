@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#my-aside {
+    width: 300px;
+    height: 100vw;
+    background-color: #001950;
+}
