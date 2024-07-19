@@ -44,7 +44,7 @@ class Recipe extends Model
     public function typology()
     {
 
-        return $this->hasOne(Typology::class);
+        return $this->belongsTo(Typology::class);
     }
 
     public function ingredients()
