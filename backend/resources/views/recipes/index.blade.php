@@ -31,6 +31,11 @@
                 <a href="{{ route('admin.recipes.show', $recipe) }}">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $recipe->name }}</h5>
                     <p class="font-normal text-gray-700 dark:text-gray-400">{{ $recipe->description }}</p>
+                    @if ($recipe->rates->isNotEmpty())
+                        @foreach ($recipe->rates as $rate)
+                            <p class="font-normal text-gray-700 dark:text-gray-400">Valutazione: {{ $rate->rating }}</p>
+                        @endforeach
+                    @endif
                 </a>
             </div>
         @endforeach
