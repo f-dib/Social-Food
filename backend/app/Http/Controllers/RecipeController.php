@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreRecipeRequest;
 use App\Http\Requests\UpdateRecipeRequest;
 use App\Models\Recipe;
+use App\Models\Typology;
 use Illuminate\Support\Facades\Auth;
 
 class RecipeController extends Controller
@@ -27,7 +28,8 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        //
+        $typologies = Typology::all();
+        return view('recipes.create', compact('typologies'));
     }
 
     /**
@@ -35,7 +37,23 @@ class RecipeController extends Controller
      */
     public function store(StoreRecipeRequest $request)
     {
-        //
+        $request->validated();
+
+        $newRecipe = new Recipe();
+
+        $request['user_id'] = Auth::id();
+
+        $newRecipe->fill($request->all());
+        $newRecipe->save();
+
+        return redirect()->route('recipes.index', $newRecipe->id);
+
+        // $validatedData = $request->validated();
+        // $validatedData['user_id'] = Auth::id();
+
+        // Recipe::create($validatedData);
+
+        // return redirect()->route('recipes.index');
     }
 
     /**
@@ -43,7 +61,9 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe)
     {
-        //
+        if ($recipe->user_id != Auth::id()) abort(404);
+
+        return view('recipes.show', compact('recipe'));
     }
 
     /**
