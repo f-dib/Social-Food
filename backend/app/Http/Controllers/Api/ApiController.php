@@ -10,10 +10,10 @@ class ApiController extends Controller
 {
     public function index()
     {
-        $recipes = Recipe::all();
+        $query = Recipe::with('rates');
         return response()->json([
             'success' => true,
-            'results' => $recipes
+            'results' => $query
         ]);
     }
 }
