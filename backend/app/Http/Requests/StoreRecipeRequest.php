@@ -11,7 +11,7 @@ class StoreRecipeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,12 @@ class StoreRecipeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|max:100',
+            'description' => 'required|max:5000',
+            'nationality' => 'required|max:30',
+            'cooking_time' => 'required|integer',
         ];
     }
+
+    
 }
