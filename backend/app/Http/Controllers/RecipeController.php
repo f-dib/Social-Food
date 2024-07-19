@@ -15,7 +15,7 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipes = Recipe::where('user_id', Auth::id())->get();
+        $recipes = Recipe::where('user_id', Auth::id())->with('rates')->get();
         $user = Auth::user();
 
         // dd($recipes);
