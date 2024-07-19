@@ -11,9 +11,9 @@ class Typology extends Model
 
     protected $fillable = ['name'];
 
-    public function recipe()
+    public function recipes()
     {
 
-        return $this->belongsTo(Recipe::class);
+        return $this->hasMany(Recipe::class);
     }
 }

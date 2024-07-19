@@ -41,7 +41,7 @@ class Recipe extends Model
         return $this->hasMany(Media::class);
     }
 
-    public function typologies()
+    public function typology()
     {
 
         return $this->hasOne(Typology::class);
@@ -53,9 +53,9 @@ class Recipe extends Model
         return $this->hasMany(Ingredient::class);
     }
 
-    public function allergens() 
+    public function allergens()
     {
-        
+
         return $this->hasMany(Allergen::class);
     }
 }
